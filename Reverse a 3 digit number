@@ -1,0 +1,13 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int num = s.nextInt();
+		int f = num/100;
+		int m = (num/10)%10;
+		int l = (num%10);
+		int sum = l*100+m*10+f*1;
+		System.out.println("Reverse: "+sum);
+	}
+}
