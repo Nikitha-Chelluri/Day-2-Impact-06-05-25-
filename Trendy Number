@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int num1 = s.nextInt();
+		int num2 = s.nextInt();
+		int temp = 0;
+		int f = 0;
+		int sum  = 0;
+		int prod = 0;
+		int l = 0;
+		if (((num1 >9) && (num1 < 100)) && ((num2 >9) && (num2 < 100))){
+		    for (int i = num1; i <= num2; i++){
+		        temp = i;
+		        f = i % 10;
+		        l = i / 10;
+		        sum = f + l;
+		        prod =  f *l;
+		        if ((sum + prod) == temp) {
+		            System.out.println(i);
+		        }  
+		    }
+	    }
+	    else {
+	        System.out.println("Not Two digit Number");
+	    }
+    }
+}
