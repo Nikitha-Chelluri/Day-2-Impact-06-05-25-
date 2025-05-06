@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int box1 = s.nextInt();
+        int box2 = s.nextInt();
+        int box3 = s.nextInt();
+        int max  = 0;
+        if ((box1 > box2) && (box1 > box3)) {
+            max = box1;
+            System.out.println("The Treasure is in Box1");
+        }
+        else if ((box2 > box1) && (box2 > box3)) {
+            max = box2;
+            System.out.println("The Treasure is in Box2");
+        }
+        else if ((box3 > box2) && (box3 > box1)) {
+            max = box3;
+            System.out.println("The Treasure is in Box3");
+        }
+        int code = 0;
+        for (int i = 1; i < max; i++) {
+            if ((box1 % i == 0) && (box2 % i == 0) && (box3 % i == 0)){
+                code = i;
+            }
+        }
+        System.out.println("The code to open box is :"+code);
+    }
+}
