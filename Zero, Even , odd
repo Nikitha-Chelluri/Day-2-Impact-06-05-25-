@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int num = s.nextInt();
+		if (num >= -9 && num <= 9){
+		    if (num == 0){
+		        System.out.println("ZERO");
+		    }
+		    else if (num % 2 == 0){
+		        System.out.println("EVEN");
+		    }
+		    else {
+		        System.out.println("ODD");
+		    }
+		}
+		else {
+		    System.out.println("NOT SINGLE DIGIT");
+		}
+	}
+}
