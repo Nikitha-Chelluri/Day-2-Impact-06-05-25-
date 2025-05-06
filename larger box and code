@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main {
+class Code {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int box1 = s.nextInt();
@@ -7,16 +7,16 @@ public class Main {
         int box3 = s.nextInt();
         int max  = 0;
         if ((box1 > box2) && (box1 > box3)) {
-            max = box1;
-            System.out.println("The Treasure is in Box1");
+            max = Math.max(box2, box3);
+            System.out.println("The Treasure is in "+max);
         }
         else if ((box2 > box1) && (box2 > box3)) {
-            max = box2;
-            System.out.println("The Treasure is in Box2");
+            max = Math.max(box1, box3);
+            System.out.println("The Treasure is in "+max);
         }
         else if ((box3 > box2) && (box3 > box1)) {
-            max = box3;
-            System.out.println("The Treasure is in Box3");
+            max = Math.max(box1, box2);
+            System.out.println("The Treasure is in "+max);
         }
         int code = 0;
         for (int i = 1; i < max; i++) {
